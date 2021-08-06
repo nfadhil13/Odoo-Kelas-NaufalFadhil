@@ -20,6 +20,8 @@ Tugas Odoo yaitu membuat module odoo untuk fitur fitur dibawah ini :
 ## 🎈 Usage <a name="usage"></a>
 
 <b>Cari module dengan nama berikut :</b>
+
+
 <img src="https://firebasestorage.googleapis.com/v0/b/musiclove-c5c2c.appspot.com/o/module.PNG?alt=media&token=b7a3faa9-c2e4-4e16-bbaa-487096bdbd47"></img>
 
 
