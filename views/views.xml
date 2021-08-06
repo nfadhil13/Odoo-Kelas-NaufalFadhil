@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+        <menuitem 
+            id="main_penduduk"
+            name="Penduduk Polban"
+        />
+
+        <menuitem 
+            id="menu_res_partner"
+            name="Data Penduduk"
+            parent="main_penduduk"
+        />
+
+        <menuitem 
+            id="submenu_mahasiswa"
+            name="Data Mahasiswa"
+            parent="menu_res_partner"
+            action="mahasiswa_action"
+        />
+
+        <menuitem 
+            id="submenu_dosen"
+            name="Data Dosen"
+            parent="menu_res_partner"
+            action="dosen_action"
+        />
+
+         <menuitem 
+            id="menu_res_partner"
+            name="Kelas"
+            parent="main_penduduk"
+        />
+
+        <menuitem 
+            id="menu_kelas_kelas"
+            name="Kelas"
+            parent="main_penduduk"
+        />
+
+        <menuitem 
+            id="submenu_daftar_kelas"
+            name="Daftar Kelas"
+            parent="menu_kelas_kelas"
+            action="kelas_kelas_action"
+        />
+
+        <menuitem 
+            id="submenu_mata_kuliah"
+            name="Mata Kuliah"
+            parent="menu_kelas_kelas"
+            action="mata_kuliah_action"
+        />
+  </data>
+</odoo>

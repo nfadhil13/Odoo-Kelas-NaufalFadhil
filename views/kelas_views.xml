@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="kelas_kelas_tree">
+            <field name="name">kelas.kelas.tree</field>
+            <field name="model">kelas.kelas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="nama_wali_kelas"/>   
+                </tree>
+            </field>
+        </record>
+            
+        <!-- Form View -->
+        <record model="ir.ui.view" id="kelas_kelas_form">
+            <field name="name">kelas.kelas.form</field>
+            <field name="model">kelas.kelas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="partner_id">
+                                    <tree>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                                <field name="wali_kelas"/>
+                                <field name="matkul_ids"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="kelas_kelas_action">
+            <field name="name">Kelas</field>
+            <field name="res_model">kelas.kelas</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>
