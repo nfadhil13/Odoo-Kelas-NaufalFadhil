@@ -22,7 +22,7 @@
 
          <menuitem 
             id="menu_res_partner"
-            name="Mahasiswa"
+            name="Civitas Akademika"
             parent="main_penduduk"
         />
 
