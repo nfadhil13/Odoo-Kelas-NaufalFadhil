@@ -9,19 +9,18 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Tugas Odoo yaitu membuat module untuk fitur fitur dibawah ini
+Tugas Odoo yaitu membuat module odoo untuk fitur fitur dibawah ini :
   - Input dan View Data Mahasiswa
   - Input dan View Data Dosen
   - Input dan View Data Kelas
   - Input dan View Data Mata Kuliah
 
 
-### Installing
-
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+<b>Cari module dengan nama berikut :</b>
+<img src="https://firebasestorage.googleapis.com/v0/b/musiclove-c5c2c.appspot.com/o/module.PNG?alt=media&token=b7a3faa9-c2e4-4e16-bbaa-487096bdbd47"></img>
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
