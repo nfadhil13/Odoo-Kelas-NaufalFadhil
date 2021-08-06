@@ -12,6 +12,21 @@
                 </tree>
             </field>
         </record>
+
+        <record id="kelas_kelas_view_kanban" model="ir.ui.view">
+            <field name="name">kelas.kelas.view.kanban</field>
+            <field name="model">kelas.kelas</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="nama_wali_kelas"/>   
+                    <templates>
+                        <t t-name="kanban-box">
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
             
         <!-- Form View -->
         <record model="ir.ui.view" id="kelas_kelas_form">
@@ -44,7 +59,7 @@
         <record model="ir.actions.act_window" id="kelas_kelas_action">
             <field name="name">Kelas</field>
             <field name="res_model">kelas.kelas</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
 
 

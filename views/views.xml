@@ -7,12 +7,6 @@
         />
 
         <menuitem 
-            id="menu_res_partner"
-            name="Data Penduduk"
-            parent="main_penduduk"
-        />
-
-        <menuitem 
             id="submenu_mahasiswa"
             name="Data Mahasiswa"
             parent="menu_res_partner"
@@ -28,7 +22,7 @@
 
          <menuitem 
             id="menu_res_partner"
-            name="Kelas"
+            name="Mahasiswa"
             parent="main_penduduk"
         />
 
