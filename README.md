@@ -1,5 +1,5 @@
 <h3 align="center">Odoo - Latihan</h3>
-
+<h6 align="center"> Mohamad Naufal Fadhil </h6>
 
 ## 📝 Table of Contents
 
