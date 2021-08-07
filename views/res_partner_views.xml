@@ -5,25 +5,25 @@
         <record model="ir.ui.view" id="data_penduduk_tree">
             <field name="name">res.partner.tree.inherited</field>
             <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="inherit_id" ref="base.view_partner_tree" />
             <field name="arch" type="xml">
                 <field name="display_name" position="after">
-                    <field name="age"/>
-                    <field name="isDosen"/>
+                    <field name="age" />
+                    <field name="isDosen" />
                 </field>
             </field>
         </record>
-    
+
 
         <!-- Dosen Form -->
         <record model="ir.ui.view" id="data_penduduk_form">
             <field name="name">res.partner.form</field>
             <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='type']" position="before">
-                    <field name="age"/>
-                    <field name="isDosen" readonly="1" />     
+                    <field name="age" />
+                    <field name="isDosen" readonly="1" />
                 </xpath>
             </field>
         </record>
@@ -33,31 +33,27 @@
             <field name="model">res.partner</field>
             <field name="arch" type="xml">
                 <kanban>
-                    <field name="name"/>
-                    <field name="age"/>
-                    <field name="isDosen"/>
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="isDosen" />
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
-                                <div class="o_kanban_image_fill_left d-none d-md-block" t-attf-style="background-image:url('#{kanban_image('hms.patient', 'image_medium', record.id.raw_value)}')"/>
-                                <div class="oe_kanban_details">
-                                    <strong class="oe_partner_heading"><field name="name"/></strong>
-                                    <ul>
-                                        <li>
-                                            <field name="name" />
-                                        </li>
-                                        <li>
-                                            <field name="age" />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <ul>
+                                <li>
+                                    <field name="name" />
+                                </li>
+                                <li>
+                                    <field name="age" />
+                                </li>
+                                <li>
+                                    <field name="isDosen" />
+                                </li>
+                            </ul>
                         </t>
                     </templates>
                 </kanban>
             </field>
         </record>
-
 
         <record id="mahasiswa_action" model="ir.actions.act_window">
             <field name="name">Data Mahasiswa</field>
@@ -67,7 +63,6 @@
             <field name="context">{"isDosen":False}</field>
             <field name="domain">[('isDosen','=',False)]</field>
         </record>
-
 
 
         <record id="dosen_action" model="ir.actions.act_window">
