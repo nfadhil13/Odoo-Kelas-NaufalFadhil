@@ -45,5 +45,11 @@
             parent="menu_kelas_kelas"
             action="mata_kuliah_action"
         />
+        
+        <menuitem
+            id="sub_menu_contact"
+            name="Data Dosen"
+            action="dosen_action"
+            parent="contacts.menu_contacts"/>
   </data>
 </odoo>

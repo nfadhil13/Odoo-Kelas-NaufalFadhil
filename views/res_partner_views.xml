@@ -9,7 +9,9 @@
             <field name="arch" type="xml">
                 <field name="display_name" position="after">
                     <field name="age" />
-                    <field name="isDosen" />
+                    <field name="tanggal_lahir" />
+                    <field name="isDosen"/>
+                    <field name="ijazah" widget="image" />
                 </field>
             </field>
         </record>
@@ -22,8 +24,10 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='type']" position="before">
-                    <field name="age" />
-                    <field name="isDosen" readonly="1" />
+                    <field name="tanggal_lahir" />
+                    <field name="isDosen" />
+                    <field name="age" readonly="1" />
+                    <field name="ijazah" widget="image" />
                 </xpath>
             </field>
         </record>
@@ -46,8 +50,12 @@
                                     <field name="age" />
                                 </li>
                                 <li>
+                                    <field name="tanggal_lahir" />
+                                </li>
+                                <li>
                                     <field name="isDosen" />
                                 </li>
+                            
                             </ul>
                         </t>
                     </templates>
