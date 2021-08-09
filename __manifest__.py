@@ -28,7 +28,8 @@
         'views/res_partner_views.xml',
         'views/kelas_views.xml',
         'views/mata_kuliah_views.xml',
-        'views/views.xml'
+        'views/views.xml',
+        'reports/res_partner_report.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

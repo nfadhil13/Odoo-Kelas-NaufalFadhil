@@ -11,5 +11,11 @@ class MataKuliah(models.Model):
     )
     partner_id = fields.Many2one(
         'res.partner', string='Dosen Pengampu', domain=[("isDosen", "=", True)])
+    dosen_pengampu_name = fields.Char(
+        string = "Dosen Pengampu",
+        related = "partner_id.name",
+        readonly=True
+    )
+    
 
     

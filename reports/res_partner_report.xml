@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="res_partner_template">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <h1>Profile <span><t t-if="docs.isDosen == True">Dosen</t><t t-if="docs.isDosen == False">Mahasiswa</t></span></h1>
+                    <center><img t-if="docs.image_1920" t-att-src="image_data_uri(docs.image_1920)"  alt="Logo" style="width:354px; height:472px;"/></center>
+                    <br></br>
+                    <p>Nama : <t t-esc="doc.name" /></p>
+                    <t t-if="docs.isDosen == False"><p>Kelas : <t t-esc="doc.kelas_name" /></p></t>
+                    <p>Umur : <t t-esc="doc.age" />
+                    </p>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr style="font-weight:bold;">
+                                <th>Mata Kuliah</th>
+                                <th>Kode</th>
+                                <th><t t-if="docs.isDosen == True">Kelas Yang diajar</t><t t-if="docs.isDosen == False">Dosen Pengampu</t></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-if="docs.isDosen == False">
+                                <tr t-foreach="doc.kelas_id.matkul_ids" t-as="matkul">
+                                    <td><t t-esc="matkul.name" /></td>
+                                    <td><t t-esc="matkul.kode" /> </td>
+                                    <td><t t-esc="matkul.dosen_pengampu_name"/></td>
+                                </tr>
+                            </t>
+                            <t t-if="docs.isDosen == True">
+                                <tr t-foreach="doc.matkul_ids" t-as="matkul">
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

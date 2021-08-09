@@ -12,6 +12,17 @@ class ResPartner(models.Model):
         )
     isDosen = fields.Boolean(string='Apakah Dosen ?')
     kelas_id = fields.Many2one('kelas.kelas', string='Kelas')
+    kelas_name = fields.Char(
+        string = "Kelas",
+        related = "kelas_id.name",
+        readonly=True
+    )
+    # kelas_ids = fields.One2many(
+    #     comodel_name='kelas.kelas',
+    #     inverse_name='',
+    #     string='Kelas diajar',
+    #     readonly=True
+    # )
     ijazah = fields.Binary(string='Ijazah')
 
 
